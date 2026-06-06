@@ -1,0 +1,45 @@
+//BIS CMD
+enum
+{
+	CMD_LE_BIS_SRC_START = 0x01,
+	CMD_LE_BIS_SRC_STOP,
+	CMD_LE_BIS_SNK_START,
+	CMD_LE_BIS_SNK_STOP,
+
+	CMD_SYS_CUR_MODE,
+	CMD_SYS_GET_CUR_MODE,
+	CMD_SYS_SWITCH_MODE,
+
+	CMD_SYS_START_OK,
+	CMD_SYS_I2S_OUT_DATA_LEN,
+	CMD_SYS_I2S_OUT_DATA_LEN_ACK,
+
+	CMD_DEVICE_SERVICE_PLUG_IN,
+	CMD_DEVICE_SERVICE_PLUG_OUT,
+
+	CMD_REMIND_SOUND_BT_CONNECT,
+	CMD_REMIND_SOUND_BT_DISCONNECT,
+	CMD_SYS_VOL_SET,
+
+	CMD_SYS_KEY_MSG_PRE,
+	CMD_SYS_KEY_MSG_NEXT,
+	CMD_SYS_KEY_PLAY_PAUSE,
+};
+
+enum
+{
+	LE_BIS_NONE,
+	LE_BIS_SRC,
+	LE_BIS_SINK,
+};
+
+extern uint8_t GetBisRole(void);
+extern void SendCmdToSlave(uint8_t cmd,uint8_t len,uint8_t *buf);
+extern void SendCurModeToSlave(void);
+
+#define SendPlugInMsgToSlave()		SendCmdToSlave(CMD_DEVICE_SERVICE_PLUG_IN,0,NULL)
+#define SendPlugOutMsgToSlave()		SendCmdToSlave(CMD_DEVICE_SERVICE_PLUG_OUT,0,NULL)
+
+#define SendPreKeyMsgToSlave()		SendCmdToSlave(CMD_SYS_KEY_MSG_PRE,0,NULL)
+#define SendNextKeyMsgToSlave()		SendCmdToSlave(CMD_SYS_KEY_MSG_NEXT,0,NULL)
+#define SendPlayPauseKeyMsgToSlave()		SendCmdToSlave(CMD_SYS_KEY_PLAY_PAUSE,0,NULL)

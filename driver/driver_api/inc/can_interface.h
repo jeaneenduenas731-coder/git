@@ -1,0 +1,20 @@
+#ifndef		__CAN_INTERFACE_H__
+#define		__CAN_INTERFACE_H__
+
+#include "can.h"
+
+typedef enum _CAN_BAUDRATE_
+{
+	RATE_50KBPS = 0,
+	RATE_100KBPS,
+	RATE_125KBPS,
+	RATE_250KBPS,
+	RATE_500KBPS,
+	RATE_1000KBPS,
+	RATE_MAX_TABLE,
+}CAN_BAUDRATE;
+
+
+void CAN_ModuleInit(CAN_BAUDRATE baudrate,CAN_PORT_MODE port);
+
+#endif

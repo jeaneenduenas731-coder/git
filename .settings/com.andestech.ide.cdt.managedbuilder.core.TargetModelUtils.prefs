@@ -1,0 +1,13 @@
+autoBuildEnable=false
+connectType=ICE
+connectTypeOptionData=2
+connectTypeOptionSettings={"id"\:2,"name"\:"ICE","type"\:"ICE","misc_argument"\:"","mechanism"\:"LOCAL","pargs"\:"","pport"\:"","version"\:"Andes ICEman","sidCompatible"\:false,"path"\:"${ANDESIGHT_ROOT}/ice/ICEman","md5"\:"6e9843bf427d13bef587793b0208ce6"}
+eclipse.preferences.version=1
+iceman.misc.args=-A -N reset-hold-script.tpl -H
+iceman.misc.args.map={2\=, empty\=-A -N reset-hold-script.tpl -H}
+name=ADP-AG101P-4GB-D1088-SPU-32I
+sid.misc.args=
+sid.misc.args.map={1\=}
+target.project.build.selection=true
+target.project.clean.selection=false
+targetURI=rse\://LOCALHOST/~target/ADP-AG101P-4GB-D1088-SPU-32I

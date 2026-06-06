@@ -797,8 +797,6 @@ void LedEffect1()
         {
             uint8_t r_val = 0, g_val = 0, b_val = 0;
 
-            r_val = 255 * userVar.brightness / 100;
-            g_val = 255 * userVar.brightness / 100;
             b_val = 255 * userVar.brightness / 100;
 
             LED_DATA_3[i * 3 + 0] = r_val;
@@ -811,8 +809,6 @@ void LedEffect1()
         {
             uint8_t r_val = 0, g_val = 0, b_val = 0;
 
-            r_val = 255 * userVar.brightness / 100;
-            g_val = 255 * userVar.brightness / 100;
             b_val = 255 * userVar.brightness / 100;
 
             LED_DATA_2[i * 3 + 0] = r_val;
